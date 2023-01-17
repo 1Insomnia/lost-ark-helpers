@@ -1,7 +1,8 @@
+import PropTypes from "prop-types";
+
 import { useState } from "react";
 import { useWindow } from "@/hooks/useWindow";
-
-import PropTypes from "prop-types";
+import { useRouter } from "next/router";
 
 import {
   AppBar,
@@ -17,12 +18,25 @@ import {
   Button,
   Toolbar,
   Container,
+  Link,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Contact"];
+
+const navItems = [
+  {
+    id: "home",
+    href: "/",
+    name: "Home",
+  },
+  {
+    id: "synergy",
+    href: "/synergy",
+    name: "Synergy",
+  },
+];
 
 export default function NavBar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -32,6 +46,8 @@ export default function NavBar() {
     setMobileOpen((prevState) => !prevState);
   };
 
+  const router = useRouter();
+
   const drawer = (
     <Box onClick={handleDrawerToggle} textAlign="center">
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -40,9 +56,12 @@ export default function NavBar() {
       <Divider />
       <List>
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+          <ListItem key={item.id} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText
+                primary={item.name}
+                onClick={() => router.push(`${item.href}`)}
+              />
             </ListItemButton>
           </ListItem>
         ))}
@@ -79,8 +98,12 @@ export default function NavBar() {
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               {navItems.map((item) => (
-                <Button key={item} sx={{ color: "accents.100" }}>
-                  {item}
+                <Button
+                  key={item.id}
+                  sx={{ color: "accents.100" }}
+                  onClick={() => router.push(`${item.href}`)}
+                >
+                  {item.name}
                 </Button>
               ))}
             </Box>

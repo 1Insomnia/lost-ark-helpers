@@ -3,14 +3,14 @@ import { Box, Typography } from "@mui/material";
 import NewsList from "@/components/news/NewsList";
 
 export default function Home({ news }) {
-  console.log(news);
-
   return (
     <Box>
-      <Typography variant="h1" component="h1" sx={{ textAlign: "center" }}>
-        Hello
-      </Typography>
-      <Box pt={4}>
+      <Box py={4}>
+        <Typography variant="h1" component="h1">
+          News
+        </Typography>
+      </Box>
+      <Box py={4}>
         <NewsList newsList={news} />
       </Box>
     </Box>

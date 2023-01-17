@@ -5,6 +5,7 @@ specifiers:
   '@emotion/styled': ^11.10.5
   '@mui/icons-material': ^5.11.0
   '@mui/material': ^5.11.4
+  '@mui/x-data-grid': ^5.17.19
   '@next/font': 13.1.2
   eslint: 8.32.0
   eslint-config-next: 13.1.2
@@ -14,12 +15,14 @@ specifiers:
   prop-types: ^15.8.1
   react: 18.2.0
   react-dom: 18.2.0
+  swr: ^2.0.0
 
 dependencies:
   '@emotion/react': 11.10.5_react@18.2.0
   '@emotion/styled': 11.10.5_hp5f5nkljdiwilp4rgxyefcplu
   '@mui/icons-material': 5.11.0_f3iq2byl5bu7ge3km7yifn3f6u
   '@mui/material': 5.11.4_5rzy53przelm5jchjmb5vr6dxy
+  '@mui/x-data-grid': 5.17.19_vcr5dvmxb6pw4fc6n3x45xpa74
   '@next/font': 13.1.2
   eslint: 8.32.0
   eslint-config-next: 13.1.2_eslint@8.32.0
@@ -29,6 +32,7 @@ dependencies:
   prop-types: 15.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  swr: 2.0.0_react@18.2.0
 
 packages:
 
@@ -421,6 +425,25 @@ packages:
       prop-types: 15.8.1
       react: 18.2.0
       react-is: 18.2.0
+    dev: false
+
+  /@mui/x-data-grid/5.17.19_vcr5dvmxb6pw4fc6n3x45xpa74:
+    resolution: {integrity: sha512-mVp2ZvPKMlVuTx8dYRv7yjRCFNGLQ6XK4c8uiGmC5NsbX58oGe3M3UH2/OLSCeOEUmcNLvZ8TH0HT306VfmW4g==}
+    engines: {node: '>=12.0.0'}
+    peerDependencies:
+      '@mui/material': ^5.4.1
+      '@mui/system': ^5.4.1
+      react: ^17.0.2 || ^18.0.0
+      react-dom: ^17.0.2 || ^18.0.0
+    dependencies:
+      '@babel/runtime': 7.20.7
+      '@mui/material': 5.11.4_5rzy53przelm5jchjmb5vr6dxy
+      '@mui/utils': 5.11.2_react@18.2.0
+      clsx: 1.2.1
+      prop-types: 15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      reselect: 4.1.7
     dev: false
 
   /@next/env/13.1.2:
@@ -2324,6 +2347,10 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /reselect/4.1.7:
+    resolution: {integrity: sha512-Zu1xbUt3/OPwsXL46hvOOoQrap2azE7ZQbokq61BQfiXvhewsKDwhMeZjTX9sX0nvw1t/U5Audyn1I9P/m9z0A==}
+    dev: false
+
   /resolve-from/4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -2525,6 +2552,16 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
+  /swr/2.0.0_react@18.2.0:
+    resolution: {integrity: sha512-IhUx5yPkX+Fut3h0SqZycnaNLXLXsb2ECFq0Y29cxnK7d8r7auY2JWNbCW3IX+EqXUg3rwNJFlhrw5Ye/b6k7w==}
+    engines: {pnpm: '7'}
+    peerDependencies:
+      react: ^16.11.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
+    dev: false
+
   /synckit/0.8.4:
     resolution: {integrity: sha512-Dn2ZkzMdSX827QbowGbU/4yjWuvNaCoScLLoMo/yKbu+P4GBR6cRGKZH27k6a9bRzdqcyd1DE96pQtQ6uNkmyw==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -2620,6 +2657,14 @@ packages:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
     dependencies:
       punycode: 2.2.0
+    dev: false
+
+  /use-sync-external-store/1.2.0_react@18.2.0:
+    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /which-boxed-primitive/1.0.2:
