@@ -17,6 +17,7 @@
     "@next/font": "13.1.2",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.2",
+    "firebase": "^9.15.0",
     "inter-ui": "^3.19.3",
     "next": "13.1.2",
     "next-themes": "^0.2.1",

@@ -1,35 +1,41 @@
 import { Box, Typography, Stack } from "@mui/material";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "@/firebase";
+import TableSynergy from "@/components/table/TableSynergy";
 
-import NextImage from "next/image";
-import synergiesData from "./synergiesData";
-
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-} from "@mui/material";
-
-function Skill({ name, src }) {
-  return (
-    <TableCell>
-      <Stack direction="row" spacing={2} alignItems="center">
-        <Box>
-          <NextImage src={src} alt={name} width={32} height={32} />
-        </Box>
-        <Box>{name}</Box>
-      </Stack>
-    </TableCell>
-  );
-}
-
-export default function Synergy() {
-  const flatPercentDamageConstant = synergiesData
-    .filter((row) => row.type === "Flat Percent Damage (Constant)")
-    .sort((a, b) => (a.className > b.className ? 1 : -1));
+export default function Synergy({ data, error }) {
+  const dataSet = [
+    {
+      title: "Flat Percent Damage (Burst)",
+      rows: data
+        .filter((row) => row.type === "Flat Percent Damage (Burst)")
+        .sort((a, b) => (a.class > b.class ? 1 : -1)),
+    },
+    {
+      title: "Attack Power",
+      rows: data
+        .filter((row) => row.type === "Attack Power")
+        .sort((a, b) => (a.class > b.class ? 1 : -1)),
+    },
+    {
+      title: "Crit Rate (Burst)",
+      rows: data
+        .filter((row) => row.type === "Crit Rate (Burst)")
+        .sort((a, b) => (a.class > b.class ? 1 : -1)),
+    },
+    {
+      title: "Crit Rate (Constant)",
+      rows: data
+        .filter((row) => row.type === "Crit Rate (Constant)")
+        .sort((a, b) => (a.class > b.class ? 1 : -1)),
+    },
+    {
+      title: "Defense Reduction",
+      rows: data
+        .filter((row) => row.type === "Defense Reduction")
+        .sort((a, b) => (a.class > b.class ? 1 : -1)),
+    },
+  ];
 
   return (
     <Box>
@@ -38,39 +44,38 @@ export default function Synergy() {
           Party Synergy
         </Typography>
       </Box>
-      <Box py={4}>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell>Class</TableCell>
-                <TableCell>Skill</TableCell>
-                <TableCell>Synergy</TableCell>
-                <TableCell>Duration</TableCell>
-                <TableCell>Uptime</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {flatPercentDamageConstant.map((skill) => {
-                return (
-                  <TableRow key={skill.uuid}>
-                    <TableCell>{skill.className}</TableCell>
-                    {/* <Skill img={skill.image} name={skill.name} /> */}
-                    <Skill src={skill.image} name={skill.name} />
-                    <TableCell>{skill.duration}</TableCell>
-                    <TableCell>
-                      {skill.synergy.map((row) => (
-                        <span key={row}>{row}</span>
-                      ))}
-                    </TableCell>
-                    <TableCell>{skill.uptime}</TableCell>
-                  </TableRow>
-                );
-              })}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Box>
+      <Stack spacing={4}>
+        {!error &&
+          dataSet.map((dataElement) => (
+            <TableSynergy
+              key={dataElement.id}
+              dataSet={dataElement.rows}
+              title={dataElement.title}
+            />
+          ))}
+      </Stack>
     </Box>
   );
+}
+
+export async function getServerSideProps() {
+  try {
+    const querySnapShot = await getDocs(collection(db, "skill"));
+    const dataSet = querySnapShot.docs.map((doc) => {
+      return { id: doc.id, ...doc.data() };
+    });
+    return {
+      props: {
+        data: dataSet,
+        error: null,
+      },
+    };
+  } catch (error) {
+    return {
+      props: {
+        data: [],
+        error: error.message,
+      },
+    };
+  }
 }
