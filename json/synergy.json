@@ -1,0 +1,401 @@
+{
+  "flatPercentDamageBurst": [
+    {
+      "uuid": "f25d1cf2-ef05-4943-b243-113cb7f5a0fd",
+      "type": "Flat Percent Damage (Burst)",
+      "class": "Gunlancer",
+      "skill": [
+        {
+          "name": "Shout of Hatred",
+          "image": "",
+          "synergy": ["3% Damage", "9% Head/Back Attack Damage"],
+          "duration": "12 seconds",
+          "uptime": "Low"
+        }
+      ]
+    }
+  ],
+  "flatPercentDamageConstant": [
+    {
+      "uuid": "9744fd97-0c3d-4f05-a74b-65a800d58f7b",
+      "type": "Flat Percent Damage (Constant)",
+      "class": "Scrapper",
+      "skill": [
+        {
+          "name": "Fierce Tiger Strike",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Crushing Smite",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Judgment",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "5c98b019-1166-4d91-bf9e-e408d3899d42",
+      "type": "Flat Percent Damage (Constant)",
+      "class": "Sorceress",
+      "skill": [
+        {
+          "name": "Dancing Flame",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Whirlpool Lightning",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "0c92fa74-d3c2-4524-967f-ee751963c7b1",
+      "type": "Flat Percent Damage (Constant)",
+      "class": "Sharpshooter",
+      "skill": [
+        {
+          "name": "Rapid Shot",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Atomic Arrow",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "5cc1a3e3-1512-4275-9892-d13b4df280c4",
+      "type": "Flat Percent Damage (Constant)",
+      "class": "Deathblade",
+      "skill": [
+        {
+          "name": "Spincutter",
+          "image": "",
+          "synergy": ["3% Damage", "9% Head/Back Attack Damage"],
+          "duration": "10 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "546bae31-aaf8-400e-bc1a-06a05733047e",
+      "type": "Flat Percent Damage (Constant)",
+      "class": "Shadowhunter",
+      "skill": [
+        {
+          "name": "Howl",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "16 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Demonic Slash",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Ruining Rush",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "6 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Death Claw",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "6 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "859e4211-3b21-46c2-b17b-509cac5863d2",
+      "type": "Flat Percent Damage (Constant)",
+      "class": "Berserker",
+      "skill": [
+        {
+          "name": "Red Dust",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "16 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Mountain Crash",
+          "image": "",
+          "synergy": ["6% Damage"],
+          "duration": "10 seconds",
+          "uptime": "High"
+        }
+      ]
+    }
+  ],
+  "attackPower": [
+    {
+      "uuid": "2670cc47-2a0b-4dcd-8b00-5089cf25b3f3",
+      "type": "Attack Power",
+      "class": "Machinist",
+      "skill": [
+        {
+          "name": "Overcharged Battery",
+          "image": "",
+          "synergy": ["6% Attack Power"],
+          "duration": "14 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "fa47f136-2dc3-43b5-8dc4-ff12234f8dac",
+      "type": "Attack Power",
+      "class": "Soulfist",
+      "skill": [
+        {
+          "name": "Energy Release",
+          "image": "",
+          "synergy": ["6% Attack Power"],
+          "duration": "16 seconds",
+          "uptime": "Medium"
+        },
+        {
+          "name": "Pulverizing Palm",
+          "image": "",
+          "synergy": ["6% Attack Power"],
+          "duration": "8 seconds",
+          "uptime": "Medium"
+        },
+        {
+          "name": "Bolting Crash",
+          "image": "",
+          "synergy": ["6% Attack Power"],
+          "duration": "10 seconds",
+          "uptime": "High"
+        }
+      ]
+    }
+  ],
+  "criteRateBurst": [
+    {
+      "type": "Crit Rate (Burst)",
+      "class": "Wardancer",
+      "skill": [
+        {
+          "name": "Roar of Courage",
+          "image": "",
+          "synergy": ["18% Crit Rate"],
+          "duration": "8 seconds",
+          "uptime": "Low"
+        }
+      ]
+    },
+    {
+      "type": "Crit Rate (Burst)",
+      "class": "Striker",
+      "skill": [
+        {
+          "name": "Lightning Whisper",
+          "image": "",
+          "synergy": ["18% Crit Rate"],
+          "duration": "6 seconds",
+          "uptime": "Low"
+        }
+      ]
+    },
+    {
+      "type": "Crit Rate (Burst)",
+      "class": "Glaivier",
+      "skill": [
+        {
+          "name": "Shackling Blue Dragon",
+          "image": "",
+          "synergy": ["18% Crit Rate"],
+          "duration": "6 seconds",
+          "uptime": "Low"
+        }
+      ]
+    },
+    {
+      "type": "Crit Rate (Burst)",
+      "class": "Gunlancer",
+      "skill": [
+        {
+          "name": "Lance of Judgment",
+          "image": "",
+          "synergy": ["10% Crit Rate"],
+          "duration": "10 seconds",
+          "uptime": "Very Low"
+        }
+      ]
+    },
+    {
+      "type": "Crit Rate (Burst)",
+      "class": "Bard",
+      "skill": [
+        {
+          "name": "Oratoriot",
+          "image": "",
+          "synergy": ["12% Crit Rate"],
+          "duration": "6 seconds",
+          "uptime": "Very Low"
+        }
+      ]
+    }
+  ],
+  "criteRateConstant": [
+    {
+      "uuid": "61edd588-2af5-41ae-b10f-bac4a572bfc9",
+      "type": "Crit Rate (Constant)",
+      "class": "Deadeye",
+      "skill": [
+        {
+          "name": "Spiral Tracker",
+          "image": "",
+          "synergy": ["10% Crit Rate"],
+          "duration": "6 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "AT02 Grenade",
+          "image": "",
+          "synergy": ["10% Crit Rate"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "917410bf-69f9-4a85-80f7-09697a5dbc00",
+      "type": "Crit Rate (Constant)",
+      "class": "Gunslinger",
+      "skill": [
+        {
+          "name": "Spiral Tracker",
+          "image": "",
+          "synergy": ["10% Crit Rate"],
+          "duration": "6 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Dexterous Shot",
+          "image": "",
+          "synergy": ["10% Crit Rate"],
+          "duration": "6 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Equilibrium",
+          "image": "",
+          "synergy": ["10% Crit Rate"],
+          "duration": "12 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "40e35cbd-363d-42cf-9ec3-b057f247a0ec",
+      "type": "Crit Rate (Constant)",
+      "class": "Arcanist",
+      "skill": [
+        {
+          "name": "Return",
+          "image": "",
+          "synergy": ["10% Crit Rate"],
+          "duration": "10 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Quadra Accelerate",
+          "image": "",
+          "synergy": ["10% Crit Rate"],
+          "duration": "8 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Scratch Dealer",
+          "image": "",
+          "synergy": ["10% Crit Rate"],
+          "duration": "10 seconds",
+          "uptime": "High"
+        }
+      ]
+    }
+  ],
+  "defenseReduction": [
+    {
+      "uuid": "50ea3d1e-edee-412e-9aaa-c43a90a36938",
+      "type": "Defense Reduction",
+      "class": "Artillerist",
+      "skill": [
+        {
+          "name": "Summon Turret",
+          "image": "",
+          "synergy": ["12% Defense Reduction"],
+          "duration": "6 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "a5e4858d-2f20-4094-ac05-b46f7b1a1391",
+      "type": "Defense Reduction",
+      "class": "Gunlancer",
+      "skill": [
+        {
+          "name": "Bash",
+          "image": "",
+          "synergy": ["12% Defense Reduction"],
+          "duration": "10 seconds",
+          "uptime": "High"
+        }
+      ]
+    },
+    {
+      "uuid": "82852140-af96-4ccd-9d54-701f520c2fbf",
+      "type": "Defense Reduction",
+      "class": "Destroyer",
+      "skill": [
+        {
+          "name": "Jumping Smash",
+          "image": "",
+          "synergy": ["12% Defense Reduction"],
+          "duration": "14 seconds",
+          "uptime": "High"
+        },
+        {
+          "name": "Power Strike",
+          "image": "",
+          "synergy": ["12% Defense Reduction"],
+          "duration": "10 seconds",
+          "uptime": "High"
+        }
+      ]
+    }
+  ]
+}
