@@ -12,7 +12,7 @@ import {
 
 import Skill from "./Skill";
 
-export default function TableSynergy({ dataSet, title }) {
+export default function TableSynergy({ headers, dataSet, title }) {
   return (
     <Box>
       <Box py={2}>
@@ -25,11 +25,9 @@ export default function TableSynergy({ dataSet, title }) {
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell>Class</TableCell>
-                <TableCell>Skill</TableCell>
-                <TableCell>Synergy</TableCell>
-                <TableCell>Duration</TableCell>
-                <TableCell>Uptime</TableCell>
+                {headers.map((header) => (
+                  <TableCell key={header}>{header}</TableCell>
+                ))}
               </TableRow>
             </TableHead>
             <TableBody>
