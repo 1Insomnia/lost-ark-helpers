@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+// MUI
 import {
   Box,
   Paper,
@@ -9,7 +11,7 @@ import {
   TableCell,
   Typography,
 } from "@mui/material";
-
+// Components
 import Skill from "./Skill";
 
 export default function TableSynergy({ headers, dataSet, title }) {
@@ -54,3 +56,9 @@ export default function TableSynergy({ headers, dataSet, title }) {
     </Box>
   );
 }
+
+TableSynergy.propTypes = {
+  headers: PropTypes.array.isRequired,
+  dataSet: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+};

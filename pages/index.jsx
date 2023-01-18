@@ -1,6 +1,5 @@
+// MUI
 import { Box, Typography } from "@mui/material";
-// Components
-import NewsList from "@/components/news/NewsList";
 
 export default function Home({ news }) {
   return (

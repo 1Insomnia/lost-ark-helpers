@@ -36,6 +36,11 @@ const navItems = [
     href: "/synergy",
     name: "Synergy",
   },
+  {
+    id: "raids",
+    href: "/raids",
+    name: "Raids",
+  },
 ];
 
 export default function NavBar() {

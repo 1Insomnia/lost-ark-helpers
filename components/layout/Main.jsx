@@ -1,5 +1,6 @@
+// MUI
 import { Box, Container } from "@mui/material";
-// Component
+// Components
 import NavBar from "./NavBar";
 
 export default function Main({ children }) {
